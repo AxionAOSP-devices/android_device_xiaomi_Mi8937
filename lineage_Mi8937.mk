@@ -10,7 +10,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
 
 # Inherit some common LineageOS stuff.
+TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# Axion Flags
+AXION_MAINTAINER := Rve
+AXION_PROCESSOR := Snapdragon_430
+AXION_CAMERA_REAR_INFO := 13
+AXION_CAMERA_FRONT_INFO := 5
+
+# CPU
+AXION_CPU_SMALL_CORES := 0,1,2,3
+AXION_CPU_BIG_CORES := 4,5,6,7
 
 # Kernel
 TARGET_KERNEL_VERSION := 4.9
