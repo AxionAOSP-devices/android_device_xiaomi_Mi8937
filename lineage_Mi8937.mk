@@ -31,6 +31,9 @@ AXION_CPU_FG := 0-7
 # BCR
 TARGET_PREBUILT_BCR := false
 
+# Blur
+TARGET_ENABLE_BLUR := false
+
 # Kernel
 TARGET_KERNEL_VERSION := 4.9
 
