@@ -106,11 +106,13 @@ static void determine_device()
 	property_override("persist.sys.axion_processor_info", "Snapdragon_425");
 	property_override("persist.sys.axion_cpu_small", "0,1");
 	property_override("persist.sys.axion_cpu_big", "2,3");
+	property_override("persist.sys.axion_cpu_fg", "0,3");
     } else if (codename == "riva") {
         set_variant_props(riva_info);
 	property_override("persist.sys.axion_processor_info", "Snapdragon_425");
         property_override("persist.sys.axion_cpu_small", "0,1");
         property_override("persist.sys.axion_cpu_big", "2,3");
+	property_override("persist.sys.axion_cpu_fg", "0,3");
     } else if (codename == "land") {
         set_variant_props(land_info);
         goto read_wingtech_board_id;
@@ -123,6 +125,7 @@ static void determine_device()
 	property_override("persist.sys.axion_processor_info", "Snapdragon_425");
         property_override("persist.sys.axion_cpu_small", "0,1");
         property_override("persist.sys.axion_cpu_big", "2,3");
+	property_override("persist.sys.axion_cpu_fg", "0,3");
     } else if (codename == "prada") {
         set_variant_props(prada_info);
     } else if (codename == "ugg") {
