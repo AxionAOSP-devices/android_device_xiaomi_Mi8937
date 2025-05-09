@@ -16,6 +16,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Axion Flags
 AXION_MAINTAINER := Rve
 AXION_PROCESSOR := Snapdragon_430
+
+# Camera
+PRODUCT_NO_CAMERA := false
 AXION_CAMERA_REAR_INFO := 13
 AXION_CAMERA_FRONT_INFO := 5
 
