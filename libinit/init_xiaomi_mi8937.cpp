@@ -8,10 +8,15 @@
 #include <libinit_utils.h>
 #include <libinit_variant.h>
 
+#include "property_service.h"
 #include "vendor_init.h"
 
 #include <android-base/file.h>
+#include <android-base/properties.h>
 #include <fstab/fstab.h>
+
+#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <sys/_system_properties.h>
 
 static const variant_info_t ugglite_info = {
     .brand = "xiaomi",
@@ -76,6 +81,17 @@ static const variant_info_t prada_info = {
     .dpi = 280,
 };
 
+void property_override(char const prop[], char const value[], bool add = true)
+{
+    auto pi = (prop_info *) __system_property_find(prop);
+
+    if (pi != nullptr) {
+        __system_property_update(pi, value, strlen(value));
+    } else if (add) {
+        __system_property_add(prop, strlen(prop), value, strlen(value));
+    }
+}
+
 static void determine_device()
 {
     std::string codename;
@@ -87,20 +103,26 @@ static void determine_device()
 
     if (codename == "rolex") {
         set_variant_props(rolex_info);
+	property_override("persist.sys.axion_processor_info", "Snapdragon_425");
     } else if (codename == "riva") {
         set_variant_props(riva_info);
+	property_override("persist.sys.axion_processor_info", "Snapdragon_425");
     } else if (codename == "land") {
         set_variant_props(land_info);
         goto read_wingtech_board_id;
     } else if (codename == "santoni") {
         set_variant_props(santoni_info);
+	property_override("persist.sys.axion_processor_info", "Snapdragon_435");
         goto read_wingtech_board_id;
     } else if (codename == "ugglite") {
         set_variant_props(ugglite_info);
+	property_override("persist.sys.axion_processor_info", "Snapdragon_425");
     } else if (codename == "prada") {
         set_variant_props(prada_info);
     } else if (codename == "ugg") {
         set_variant_props(ugg_info);
+	property_override("persist.sys.axion_processor_info", "Snapdragon_435");
+	property_override("persist.sys.device_camera_info_front", "16");
     }
 
     return;
