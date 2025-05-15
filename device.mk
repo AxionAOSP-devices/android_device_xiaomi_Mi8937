@@ -22,15 +22,15 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
 PRODUCT_PACKAGES += \
-    CustomROMsOverlay_Mi8937 \
-    xiaomi_prada_overlay \
-    xiaomi_prada_overlay_Settings \
-    xiaomi_rolex_overlay \
-    xiaomi_riva_overlay \
-    xiaomi_ugg_overlay \
-    xiaomi_ugglite_overlay \
-    xiaomi_wt8937_overlay \
-    xiaomi_wt8937_overlay_Settings
+    CustomROMsMi8937Overlay \
+    XiaomiPradaOverlay \
+    XiaomiPradaSettingsOverlay \
+    XiaomiRolexOverlay \
+    XiaomiRivaOverlay \
+    XiaomiUggOverlay \
+    XiaomiUggliteOverlay \
+    XiaomiWt8937Overlay \
+    XiaomiWt8937SettingsOverlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -132,7 +132,7 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    WifiOverlay_prada
+    XiaomiPradaWifiOverlay
 
 # Inherit from vendor blobs
 $(call inherit-product, vendor/xiaomi/Mi8937/Mi8937-vendor.mk)

@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "xiaomi_riva_overlay",
+    name: "XiaomiRivaOverlay",
     sdk_version: "current",
     device_specific: true,
 }

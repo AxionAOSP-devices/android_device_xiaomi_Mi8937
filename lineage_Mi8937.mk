@@ -45,11 +45,11 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
 PRODUCT_PACKAGES += \
-    xiaomi_prada_overlay_lineage \
-    xiaomi_riva_overlay_lineage \
-    xiaomi_rolex_overlay_lineage \
-    xiaomi_ulysse_overlay_lineage \
-    xiaomi_wt8937_overlay_lineage
+    XiaomiPradaLineageOverlay \
+    XiaomiRivaLineageOverlay \
+    XiaomiRolexLineageOverlay \
+    XiaomiUlysseLineageOverlay \
+    XiaomiWt8937LineageOverlay
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := Mi8937

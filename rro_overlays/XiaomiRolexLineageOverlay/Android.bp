@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "CustomROMsOverlay_Mi8937",
+    name: "XiaomiRolexLineageOverlay",
     sdk_version: "current",
     device_specific: true,
 }

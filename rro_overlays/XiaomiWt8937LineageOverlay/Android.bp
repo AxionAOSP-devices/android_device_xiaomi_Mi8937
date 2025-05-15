@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "xiaomi_prada_overlay_Settings",
+    name: "XiaomiWt8937LineageOverlay",
     sdk_version: "current",
     device_specific: true,
 }

@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "xiaomi_rolex_overlay",
+    name: "XiaomiUggOverlay",
     sdk_version: "current",
     device_specific: true,
 }

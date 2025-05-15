@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "xiaomi_wt8937_overlay",
+    name: "CustomROMsMi8937Overlay",
     sdk_version: "current",
     device_specific: true,
 }

@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "xiaomi_ugglite_overlay",
+    name: "XiaomiWt8937SettingsOverlay",
     sdk_version: "current",
     device_specific: true,
 }

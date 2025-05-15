@@ -1,5 +1,5 @@
 runtime_resource_overlay {
-    name: "xiaomi_ugg_overlay",
+    name: "XiaomiUggliteOverlay",
     sdk_version: "current",
     device_specific: true,
 }
