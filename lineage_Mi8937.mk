@@ -34,6 +34,9 @@ TARGET_PREBUILT_BCR := false
 # Blur
 TARGET_ENABLE_BLUR := false
 
+# AudioFX
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Kernel
 TARGET_KERNEL_VERSION := 4.9
 
