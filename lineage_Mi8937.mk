@@ -31,6 +31,11 @@ TARGET_ENABLE_BLUR := false
 # Kernel
 TARGET_KERNEL_VERSION := 4.9
 
+# LineageOS Prebuilts
+ifneq ($(WITH_GMS),true)
+TARGET_INCLUDES_LOS_PREBUILTS := true
+endif
+
 # Inherit from Mi8937 device
 $(call inherit-product, device/xiaomi/Mi8937/device.mk)
 
