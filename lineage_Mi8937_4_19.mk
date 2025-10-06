@@ -48,6 +48,9 @@ ifneq ($(WITH_GMS),true)
 TARGET_INCLUDES_LOS_PREBUILTS := true
 endif
 
+# High Brightness Mode (HBM)
+HBM_SUPPORTED := false
+
 # Inherit from Mi8937 device
 $(call inherit-product, device/xiaomi/Mi8937/device.mk)
 
