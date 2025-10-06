@@ -54,6 +54,16 @@ HBM_SUPPORTED := false
 # Flashlight strength
 TORCH_STR_SUPPORTED := false
 
+# do not enable TARGET_IS_LOW_RAM if your device ram is greater than 4gb
+# else OOM will most likely occur on operations where applications and camera can fill heap limit
+# e.g uploading video/media on apps with camera preview
+# this is a mitigation targets legacy devices 4gb below
+# Using quicken is a trade-off: here we trade clean pages for dirty pages,
+# extra cpu and battery. That's because the quicken files will be jit-ed in all
+# the processes that load of shared apk and the code cache is not shared.
+# Some notable apps that will be affected by this are gms and chrome.
+TARGET_IS_LOW_RAM := true
+
 # Inherit from Mi8937 device
 $(call inherit-product, device/xiaomi/Mi8937/device.mk)
 
