@@ -51,6 +51,9 @@ endif
 # High Brightness Mode (HBM)
 HBM_SUPPORTED := false
 
+# Flashlight strength
+TORCH_STR_SUPPORTED := false
+
 # Inherit from Mi8937 device
 $(call inherit-product, device/xiaomi/Mi8937/device.mk)
 
